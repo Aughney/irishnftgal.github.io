@@ -62,7 +62,8 @@ nav.top ul a:hover { color: var(--paper) }
 .chips { display: flex; flex-wrap: wrap; gap: 8px }
 .chip { font: 500 var(--s-1)/1 var(--mono); padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted) }
 .hero figure { margin: 0; position: relative; min-width: 0 }
-.hero figure img { display: block; width: 100%; border-radius: 4px; box-shadow: 0 0 0 1px var(--line), 0 30px 90px -30px color-mix(in srgb, var(--emerald) 50%, transparent) }
+.hero figure video { aspect-ratio: 756/700; background: #000 }
+.hero figure img, .hero figure video { display: block; width: 100%; border-radius: 4px; box-shadow: 0 0 0 1px var(--line), 0 30px 90px -30px color-mix(in srgb, var(--emerald) 50%, transparent) }
 .hero figcaption { margin-top: 12px; display: flex; justify-content: space-between; gap: 12px }
 @media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr } .hero figure { max-width: 440px } }
 
@@ -210,8 +211,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
       </div>
     </div>
     <figure>
-      <img src="self-portrait.png" alt="Self-portrait of Niamh rendered in green ASCII characters on black" width="1244" height="1150">
-      <figcaption><span class="eyebrow">Self-portrait · ASCII</span><span class="eyebrow">Collab with FrankNFT.eth</span></figcaption>
+      <video src="digital-desire.mp4" poster="digital-desire.jpg" autoplay muted loop playsinline aria-label="Animated ASCII self-portrait of Niamh, built from shifting characters on black"></video>
+      <figcaption><span class="eyebrow">Digital Desire · ASCII self-portrait</span><span class="eyebrow">Collab with FrankNFT.eth</span></figcaption>
     </figure>
   </div>
 </header>
