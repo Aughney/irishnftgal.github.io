@@ -190,6 +190,9 @@ section.block { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid va
 .names li:nth-child(3n+2) { color: var(--magenta) }
 .names li:nth-child(3n) { color: var(--cyan) }
 
+.xp-link { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px }
+.xp-link:hover { text-decoration-color: var(--orange) }
+
 /* links */
 .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px }
 .links-grid a { display: grid; gap: 4px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; background: var(--ink-2); transition: border-color .15s, transform .15s }
@@ -358,7 +361,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
       </li>
       <li>
         <span class="where">Ireland · Solana</span>
-        <div class="what"><h3>Superteam Ireland</h3><p>Member of Superteam Ireland, the Solana community in Ireland.</p></div>
+        <div class="what"><h3><a class="xp-link" href="https://ie.superteam.fun/" target="_blank" rel="noopener">Superteam Ireland ↗</a></h3><p>Member of Superteam Ireland, the Solana community in Ireland.</p></div>
       </li>
       <li>
         <span class="where">Maven</span>
