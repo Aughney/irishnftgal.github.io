@@ -160,6 +160,8 @@ section.block { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid va
 .links-grid a { display: grid; gap: 4px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; background: var(--ink-2); transition: border-color .15s, transform .15s }
 .links-grid a:hover { border-color: var(--cyan); transform: translateY(-2px) }
 .links-grid .t { font-weight: 600 }
+.links-grid .mail { border-color: color-mix(in srgb, var(--orange) 45%, var(--line)) }
+.links-grid .mail .u { color: var(--paper); user-select: all }
 .links-grid .u { font: 400 var(--s-1)/1.3 var(--mono); color: var(--muted); overflow-wrap: anywhere }
 
 footer { padding-block: 40px 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: var(--s-1) }
@@ -341,7 +343,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
 <section class="block" id="links">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Collect &amp; follow</span>
+      <span class="eyebrow">Collect, follow &amp; contact</span>
       <h2>Find the work</h2>
     </div>
     <div class="links-grid">
@@ -351,12 +353,13 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
       <a href="https://x.com/irishnftgal" target="_blank" rel="noopener"><span class="t">X ↗</span><span class="u">@irishnftgal</span></a>
       <a href="https://maven.com/irishnftgal/nft-marketing" target="_blank" rel="noopener"><span class="t">NFT marketing course ↗</span><span class="u">maven.com/irishnftgal</span></a>
       <a href="https://linktr.ee/irishnftgal" target="_blank" rel="noopener"><span class="t">All links ↗</span><span class="u">linktr.ee/irishnftgal</span></a>
+      <a class="mail" href="mailto:irishnftgal@gmail.com"><span class="t">Email ✉</span><span class="u">irishnftgal@gmail.com</span></a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap"><span>© Niamh Aughney · irishnftgal</span><span>Growth Marketing. Artist.</span></div>
+  <div class="wrap"><span>© Niamh Aughney · irishnftgal · <a href="mailto:irishnftgal@gmail.com">irishnftgal@gmail.com</a></span><span>Growth Marketing. Artist.</span></div>
 </footer>
 </body>
 </html>
