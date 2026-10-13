@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Niamh Aughney (irishnftgal): artist, keynote speaker, educator and marketeer.">
+<title>irishnftgal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a gallery after dark. Neon on black, the artwork carries the colour; type is loud once, in the hero. Single dark look by choice. */
+:root {
+  color-scheme: dark;
+  --ink: #0a0b12;        /* the black ground of the paintings */
+  --ink-2: #13151f;
+  --line: #262a3a;
+  --paper: #f4ece0;      /* warm white for text */
+  --muted: #a8a3b5;
+  --orange: #ff7a1a;     /* the mane's outline */
+  --cyan: #3fc5ff;
+  --magenta: #e2338f;
+  --emerald: #3ddc97;    /* reserved for the Celtic collection */
+  --display: "Syne", "Arial Black", system-ui, sans-serif;
+  --body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --s-1: .8125rem; --s0: 1rem; --s1: 1.25rem; --s2: 1.75rem; --s3: 2.5rem;
+}
+* { box-sizing: border-box }
+img { height: auto }
+html { scroll-behavior: smooth }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } * { animation: none !important; transition: none !important } }
+body { margin: 0; background: var(--ink); color: var(--paper); font: 400 var(--s0)/1.6 var(--body) }
+a { color: inherit }
+a:focus-visible, video:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 2px }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px) }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.02 }
+h2 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; letter-spacing: -.02em }
+h3 { font-size: var(--s1); font-weight: 600 }
+p { margin: 0; max-width: 62ch }
+.eyebrow { font: 500 var(--s-1)/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+
+/* nav */
+nav.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--ink) 86%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line) }
+nav.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px }
+.mark { font: 800 var(--s1)/1 var(--display); text-decoration: none; letter-spacing: -.01em }
+.mark span { color: var(--orange) }
+nav.top ul { display: flex; gap: clamp(12px, 2.5vw, 28px); list-style: none; margin: 0; padding: 0; font-size: var(--s-1); font-weight: 500 }
+nav.top ul a { text-decoration: none; color: var(--muted) }
+nav.top ul a:hover { color: var(--paper) }
+@media (max-width: 640px) { nav.top ul { display: none } }
+
+/* hero */
+.hero { padding-block: clamp(40px, 8vw, 96px) clamp(48px, 8vw, 88px) }
+.hero .wrap { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: clamp(28px, 5vw, 64px); align-items: center }
+.hero-text { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px }
+.hero h1 { font-size: clamp(2.5rem, 7.2vw, 5.25rem); font-weight: 800; letter-spacing: -.04em; line-height: .92 }
+.hero h1 .stroke { color: transparent; -webkit-text-stroke: 2px var(--orange); }
+.hero h1 .fill { background: linear-gradient(100deg, var(--magenta), var(--orange) 45%, var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent }
+.lede { font-size: var(--s1); line-height: 1.5; color: var(--paper) }
+.lede b { font-weight: 600 }
+.chips { display: flex; flex-wrap: wrap; gap: 8px }
+.chip { font: 500 var(--s-1)/1 var(--mono); padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted) }
+.hero figure { margin: 0; position: relative; min-width: 0 }
+.hero figure img { display: block; width: 100%; border-radius: 4px; box-shadow: 0 0 0 1px var(--line), 0 30px 90px -30px color-mix(in srgb, var(--emerald) 50%, transparent) }
+.hero figcaption { margin-top: 12px; display: flex; justify-content: space-between; gap: 12px }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr } .hero figure { max-width: 440px } }
+
+section.block { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid var(--line) }
+.head { display: grid; gap: 14px; margin-bottom: clamp(28px, 4vw, 48px) }
+
+/* pop art */
+.pop .wrap > .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 36px) }
+.pop .note { display: grid; gap: 10px; padding-top: 18px; border-top: 2px solid var(--c) }
+.pop .note p { color: var(--muted) }
+@media (max-width: 760px) { .pop .wrap > .grid { grid-template-columns: 1fr } }
+
+/* moon */
+.moon .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: center }
+.moon-disc { position: relative; aspect-ratio: 1; width: 100%; max-width: 420px; border-radius: 50%;
+  background:
+    radial-gradient(circle at 63% 34%, #1b1d26 0 9%, transparent 9.5%),
+    radial-gradient(circle at 34% 58%, #262836 0 6%, transparent 6.5%),
+    radial-gradient(circle at 48% 76%, #22242f 0 4%, transparent 4.5%),
+    radial-gradient(circle at 38% 32%, #3a3c4a, #1a1b24 70%);
+  box-shadow: inset -30px -20px 60px rgba(0,0,0,.6), 0 0 90px -10px color-mix(in srgb, var(--cyan) 30%, transparent) }
+.pin { position: absolute; left: 63%; top: 34%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 6px color-mix(in srgb, var(--orange) 25%, transparent), 0 0 24px var(--orange); animation: pulse 2.4s ease-in-out infinite }
+.pin-label { position: absolute; left: 63%; top: 34%; transform: translate(18px, -50%); font: 500 var(--s-1)/1.2 var(--mono); color: var(--paper); white-space: nowrap }
+@keyframes pulse { 50% { box-shadow: 0 0 0 12px color-mix(in srgb, var(--orange) 10%, transparent), 0 0 32px var(--orange) } }
+.moon-text { display: grid; gap: 20px; min-width: 0 }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 10px 20px; margin: 0; font-size: var(--s-1) }
+.facts dt { font-family: var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .08em }
+.facts dd { margin: 0 }
+.btn { justify-self: start; display: inline-flex; gap: 8px; align-items: center; font-weight: 600; text-decoration: none; padding: 12px 18px; border-radius: 999px; background: var(--paper); color: var(--ink) }
+.btn:hover { background: var(--orange) }
+.moon-art { margin: 0; display: grid; gap: 14px; min-width: 0 }
+.moon-art img { display: block; width: 100%; border-radius: 4px; box-shadow: 0 0 0 1px var(--line), 0 30px 80px -30px color-mix(in srgb, var(--magenta) 55%, transparent) }
+.moon-art figcaption { display: flex; align-items: center; gap: 12px }
+.moon-art .pin { position: static; margin: 0; width: 10px; height: 10px; flex: none }
+@media (max-width: 760px) { .moon .wrap { grid-template-columns: 1fr } .moon-art { max-width: 420px } }
+
+/* celtic */
+.celtic { background: radial-gradient(ellipse at 20% 0%, color-mix(in srgb, var(--emerald) 10%, transparent), transparent 60%) }
+.celtic .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center }
+.celtic h2 { color: var(--emerald) }
+.knot { padding: clamp(20px, 4vw, 48px); border: 1px solid color-mix(in srgb, var(--emerald) 35%, var(--line)); border-radius: 4px; min-width: 0 }
+.knot img { display: block; width: 100%; filter: drop-shadow(0 0 18px color-mix(in srgb, var(--emerald) 40%, transparent)) }
+.spec { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 4px; overflow: hidden }
+.spec div { padding: 16px; display: grid; gap: 6px; min-width: 0 }
+.spec div + div { border-left: 1px solid var(--line) }
+.spec strong { font: 500 var(--s1)/1.1 var(--mono); color: var(--emerald); font-variant-numeric: tabular-nums; overflow-wrap: anywhere }
+.celtic-text { display: grid; gap: 22px; min-width: 0 }
+@media (max-width: 760px) { .celtic .wrap { grid-template-columns: 1fr } .knot { order: -1 } }
+@media (max-width: 420px) { .spec { grid-template-columns: 1fr } .spec div + div { border-left: 0; border-top: 1px solid var(--line) } }
+
+/* gallery */
+.gallery { columns: 3 260px; column-gap: clamp(16px, 2.5vw, 28px); margin-bottom: clamp(40px, 6vw, 72px) }
+.art { break-inside: avoid; margin: 0 0 clamp(16px, 2.5vw, 28px); display: grid; gap: 10px }
+.art img, .art video { display: block; width: 100%; height: auto; border-radius: 4px; border: 1px solid var(--line) }
+.art video { aspect-ratio: 1; background: #000 }
+.art figcaption { display: grid; gap: 2px }
+.art .t { font: 600 var(--s0)/1.3 var(--display) }
+.art .d { font-size: var(--s-1); line-height: 1.5; color: var(--muted); margin-top: 4px }
+.art .k { font: 400 var(--s-1)/1.4 var(--mono); color: var(--muted) }
+.studio .wrap { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: clamp(28px, 5vw, 64px); align-items: center }
+.studio figure { margin: 0 }
+.studio img { display: block; width: 100%; border-radius: 4px; border: 1px solid var(--line) }
+.studio .head { margin: 0 }
+.studio .head p + p { margin-top: 2px }
+.studio p { color: var(--muted) }
+@media (max-width: 760px) { .studio .wrap { grid-template-columns: 1fr } .studio figure { max-width: 420px } }
+
+/* yearbook */
+.reel .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(28px, 5vw, 64px); align-items: center }
+.reel video { display: block; width: 100%; aspect-ratio: 750/682; object-fit: cover; border-radius: 4px; border: 1px solid var(--line); background: #000 }
+.reel .head { margin: 0 }
+.reel p { color: var(--muted) }
+.reel .facts { margin-top: 6px }
+.reel .facts dd { color: var(--paper) }
+@media (max-width: 760px) { .reel .wrap { grid-template-columns: 1fr } }
+
+/* experience */
+.xp-list { list-style: none; margin: 0; padding: 0; display: grid }
+.xp-list li { display: grid; grid-template-columns: 220px 1fr; gap: 8px 32px; padding-block: 24px; border-top: 1px solid var(--line) }
+.xp-list li:last-child { border-bottom: 1px solid var(--line) }
+.xp-list .where { font: 500 var(--s-1)/1.4 var(--mono); color: var(--orange); text-transform: uppercase; letter-spacing: .08em }
+.xp-list .what { display: grid; gap: 6px; min-width: 0 }
+.xp-list .what p { color: var(--muted) }
+@media (max-width: 640px) { .xp-list li { grid-template-columns: 1fr } }
+
+/* followers */
+.names { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px }
+.names li { font: 600 clamp(1.25rem, 3vw, 2rem)/1 var(--display); padding: 18px 26px; border: 1px solid var(--line); border-radius: 999px; background: var(--ink-2) }
+.names li:nth-child(3n+1) { color: var(--orange) }
+.names li:nth-child(3n+2) { color: var(--magenta) }
+.names li:nth-child(3n) { color: var(--cyan) }
+
+/* links */
+.links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px }
+.links-grid a { display: grid; gap: 4px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; background: var(--ink-2); transition: border-color .15s, transform .15s }
+.links-grid a:hover { border-color: var(--cyan); transform: translateY(-2px) }
+.links-grid .t { font-weight: 600 }
+.links-grid .u { font: 400 var(--s-1)/1.3 var(--mono); color: var(--muted); overflow-wrap: anywhere }
+
+footer { padding-block: 40px 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: var(--s-1) }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between }
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#top">irish<span>nft</span>gal</a>
+    <ul>
+      <li><a href="#pop">Paintings</a></li>
+      <li><a href="#moon">The Moon</a></li>
+      <li><a href="#celtic">Celtic</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#followers">Followers</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="eyebrow">Niamh Aughney · Keynote speaker, educator &amp; marketeer</span>
+      <h1><span class="fill">Artist.</span></h1>
+      <p class="lede">I paint horses, elephants and other animals in electric colour. One of my artworks has been on the Moon since 2025, in the <b>MoonMars</b> museum at Mare Crisium.</p>
+      <div class="chips" aria-label="Where to find the work">
+        <span class="chip">Ethereum</span><span class="chip">Tezos</span><span class="chip">SuperRare</span><span class="chip">OpenSea</span><span class="chip">objkt</span>
+      </div>
+    </div>
+    <figure>
+      <img src="self-portrait.png" alt="Self-portrait of Niamh rendered in green ASCII characters on black" width="1244" height="1150">
+      <figcaption><span class="eyebrow">Self-portrait · ASCII</span><span class="eyebrow">Collab with FrankNFT.eth</span></figcaption>
+    </figure>
+  </div>
+</header>
+
+<section class="block pop" id="pop">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Paintings</span>
+      <h2>Loud pop-art</h2>
+    </div>
+    <div class="gallery">
+      <figure class="art"><img src="my-lovely-horse.jpg" alt="Horse head in blocks of orange, blue, red and green with a rainbow mane, on black" width="867" height="1080" loading="lazy"><figcaption><span class="t">My Lovely Horse</span></figcaption></figure>
+      <figure class="art"><img src="love-and-loyalty.jpg" alt="Two elephants face to face, painted in teal, coral, grey and yellow patches on a purple ground" width="1200" height="842" loading="lazy"><figcaption><span class="t">Love &amp; Loyalty</span></figcaption></figure>
+      <figure class="art"><img src="elephant-teal.jpg" alt="Elephant walking forward with white tusks, its ears patterned with cream, pink and grey shapes and spirals, on a teal ground" width="1200" height="1080" loading="lazy"><figcaption><span class="t">Elephant</span></figcaption></figure>
+      <figure class="art"><video src="horse-motion.mp4" poster="horse-motion.jpg" autoplay muted loop playsinline aria-label="Animation of a horse breaking apart into glitching blocks of purple, pink, orange and green"></video><figcaption><span class="t">Adapt</span><span class="k">Collab with mpozzecco · Animation</span></figcaption></figure>
+      <figure class="art"><img src="we-are-warriors.jpg" alt="Female torso painted in coral, lilac and blue brushstrokes on white canvas" width="836" height="1200" loading="lazy"><figcaption><span class="t">We are warriors</span><span class="k">NFT Goddesses collection · Free The Nipple</span><span class="d">An acrylic study of the female form, painted for the Free The Nipple movement. A portion of the proceeds went towards Breast Cancer Research.</span></figcaption></figure>
+    </div>
+    <div class="grid">
+      <div class="note" style="--c: var(--orange)">
+        <h3>One bold ground</h3>
+        <p>Each animal sits on a single flat colour, black, teal or purple, so the figure is all you look at.</p>
+      </div>
+      <div class="note" style="--c: var(--magenta)">
+        <h3>Brushstroke colour</h3>
+        <p>Manes, ears and hides are built from patches of orange, coral, violet, yellow and turquoise rather than natural tones.</p>
+      </div>
+      <div class="note" style="--c: var(--cyan)">
+        <h3>Drawn line</h3>
+        <p>A dark or glowing contour holds the shapes together and gives the eyes their focus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block studio" id="studio">
+  <div class="wrap">
+    <figure><img src="studio.jpg" alt="Niamh at her easel, brush in hand, painting the teal elephant with a palette of paint in her other hand" width="960" height="1200" loading="lazy"></figure>
+    <div class="head">
+      <span class="eyebrow">In the studio</span>
+      <h2>Painted by hand</h2>
+      <p>Niamh's animals are acrylic paintings on canvas, made by hand at the easel. Each one starts with a single flat colour across the whole canvas, black, teal or purple, which becomes the ground the animal stands out from.</p>
+      <p>The animal is then built up in blocks of bright acrylic, with patches of coral, yellow, violet and turquoise laid side by side rather than blended. A fine drawn line goes in last to hold the shapes together and bring the eyes into focus, and every finished canvas carries her hand-painted signature.</p>
+      <p>Here she is working on the elephant.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block moon" id="moon">
+  <div class="wrap">
+    <figure class="moon-art">
+      <img src="horse.jpg" alt="Pop art horse head in neon orange, magenta, cyan and violet brushstrokes, its mane streaming across a black background" width="1100" height="1650" loading="lazy">
+      <figcaption><span class="pin"></span><span class="eyebrow">On the Moon · Mare Crisium</span></figcaption>
+    </figure>
+    <div class="moon-text">
+      <span class="eyebrow">Off-world exhibition</span>
+      <h2>My art went to the Moon</h2>
+      <p>In 2025 this horse travelled to the Moon with MoonMars, the first museum on the Moon. The collection rests at Mare Crisium, on the Moon's near side.</p>
+      <dl class="facts">
+        <dt>Museum</dt><dd>MoonMars</dd>
+        <dt>Site</dt><dd>Mare Crisium</dd>
+        <dt>On the Moon since</dt><dd>2 March 2025</dd>
+        <dt>Artworks there</dt><dd>47</dd>
+      </dl>
+      <a class="btn" href="https://www.moonmars.com/" target="_blank" rel="noopener">Visit MoonMars ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="block celtic" id="celtic">
+  <div class="wrap">
+    <div class="celtic-text">
+      <span class="eyebrow">Collection</span>
+      <h2>Celtic art, onchain</h2>
+      <p>A separate body of work rooted in Irish knotwork: interlaced lines with no beginning and no end. The collection lives fully onchain, with only 200 pieces ever to exist.</p>
+      <div class="spec">
+        <div><span class="eyebrow">Storage</span><strong>Onchain</strong></div>
+        <div><span class="eyebrow">Standard</span><strong>ERC721F</strong></div>
+        <div><span class="eyebrow">Supply</span><strong>200</strong></div>
+      </div>
+    </div>
+    <div class="knot">
+      <img src="celtic-knot.svg" alt="Interlaced Celtic knot motif drawn in green lines" width="1006" height="870">
+    </div>
+  </div>
+</section>
+
+<section class="block reel" id="yearbook">
+  <div class="wrap">
+    <video src="nft-yearbook.mp4" poster="nft-yearbook.jpg" autoplay muted loop playsinline aria-label="An NFT Yearbook book turning inside a lit glass display case"></video>
+    <div class="head">
+      <span class="eyebrow">Featured</span>
+      <h2>NFT Yearbook</h2>
+      <p>A 420-page physical coffee table book and 3D digital publication documenting Web3 culture and digital art.</p>
+      <dl class="facts">
+        <dt>Format</dt><dd>Coffee table book and 3D digital edition</dd>
+        <dt>Length</dt><dd>420 pages</dd>
+        <dt>Archived by</dt><dd>Harvard University libraries and Harvard Business School</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Beyond the canvas</span>
+      <h2>Curating and marketing in Web3</h2>
+    </div>
+    <ul class="xp-list">
+      <li>
+        <span class="where">Tallinn, Estonia</span>
+        <div class="what"><h3>Exhibition curator</h3><p>Curated exhibitions at real-life art events in Tallinn.</p></div>
+      </li>
+      <li>
+        <span class="where">Istanbul, Turkey</span>
+        <div class="what"><h3>Istanbul Blockchain Week</h3><p>Ran marketing and created social media content for the event.</p></div>
+      </li>
+      <li>
+        <span class="where">Crypto Twitter</span>
+        <div class="what"><h3>CryptoSkulls and CryptoPunks V1</h3><p>Handled Crypto Twitter marketing for these well-known Ethereum projects.</p></div>
+      </li>
+      <li>
+        <span class="where">Maven</span>
+        <div class="what"><h3>Teaching</h3><p>Runs the course <i>Getting started with Self-Custody &amp; NFT Marketing</i>.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block followers" id="followers">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Followed by</span>
+      <h2>Influential followers</h2>
+    </div>
+    <ul class="names">
+      <li>Gary Vee</li>
+      <li>Paris Hilton</li>
+      <li>John Cena</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block" id="links">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Collect &amp; follow</span>
+      <h2>Find the work</h2>
+    </div>
+    <div class="links-grid">
+      <a href="https://superrare.com/0x1e3eac91085df57b4aa417b1471349d0bdb19152/bold-64" target="_blank" rel="noopener"><span class="t">SuperRare ↗</span><span class="u">superrare.com</span></a>
+      <a href="https://opensea.io/irishnftgal?tab=created" target="_blank" rel="noopener"><span class="t">Paintings on OpenSea ↗</span><span class="u">opensea.io/irishnftgal</span></a>
+      <a href="https://objkt.com/profile/tz1PRn7wtc3Lg6RejcPXkrK2cAQeoWv95PnJ/created" target="_blank" rel="noopener"><span class="t">Tezos on objkt ↗</span><span class="u">objkt.com</span></a>
+      <a href="https://x.com/irishnftgal" target="_blank" rel="noopener"><span class="t">X ↗</span><span class="u">@irishnftgal</span></a>
+      <a href="https://maven.com/irishnftgal/nft-marketing" target="_blank" rel="noopener"><span class="t">NFT marketing course ↗</span><span class="u">maven.com/irishnftgal</span></a>
+      <a href="https://linktr.ee/irishnftgal" target="_blank" rel="noopener"><span class="t">All links ↗</span><span class="u">linktr.ee/irishnftgal</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© Niamh Aughney · irishnftgal</span><span>Growth Marketing. Artist.</span></div>
+</footer>
+</body>
+</html>
