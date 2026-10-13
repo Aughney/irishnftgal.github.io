@@ -149,6 +149,15 @@ section.block { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid va
 .xp-list .what p { color: var(--muted) }
 @media (max-width: 640px) { .xp-list li { grid-template-columns: 1fr } }
 
+/* speaking */
+.talk { display: flex; align-items: center; gap: 20px; padding: clamp(20px, 4vw, 32px); border: 1px solid var(--line); border-radius: 4px; text-decoration: none; background: radial-gradient(ellipse at 0% 50%, color-mix(in srgb, var(--magenta) 18%, transparent), transparent 60%), var(--ink-2); transition: border-color .15s }
+.talk:hover { border-color: var(--magenta) }
+.play { flex: none; width: 64px; height: 64px; border-radius: 50%; background: var(--paper); position: relative }
+.play::after { content: ""; position: absolute; left: 26px; top: 20px; border-left: 18px solid var(--ink); border-top: 12px solid transparent; border-bottom: 12px solid transparent }
+.talk-text { display: grid; gap: 4px; min-width: 0 }
+.talk .t { font: 600 var(--s1)/1.2 var(--display) }
+.talk .u { font: 400 var(--s-1)/1.3 var(--mono); color: var(--muted) }
+
 /* followers */
 .names { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px }
 .names li { font: 600 clamp(1.25rem, 3vw, 2rem)/1 var(--display); padding: 18px 26px; border: 1px solid var(--line); border-radius: 999px; background: var(--ink-2) }
@@ -179,6 +188,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
       <li><a href="#moon">The Moon</a></li>
       <li><a href="#celtic">Celtic</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#speaking">Speaking</a></li>
       <li><a href="#followers">Followers</a></li>
       <li><a href="#links">Links</a></li>
     </ul>
@@ -326,6 +336,20 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
         <div class="what"><h3>Teaching</h3><p>Runs the course <i>Getting started with Self-Custody &amp; NFT Marketing</i>.</p></div>
       </li>
     </ul>
+  </div>
+</section>
+
+<section class="block speaking" id="speaking">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">On stage</span>
+      <h2>Keynote speaking</h2>
+      <p>Niamh gives keynote talks at Web3 and art events. Watch one of her keynotes below.</p>
+    </div>
+    <a class="talk" href="https://x.com/irishnftgal/status/2057077303960592696" target="_blank" rel="noopener">
+      <span class="play" aria-hidden="true"></span>
+      <span class="talk-text"><span class="t">Watch the keynote ↗</span><span class="u">Video on X · @irishnftgal</span></span>
+    </a>
   </div>
 </section>
 
