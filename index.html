@@ -184,6 +184,8 @@ section.block { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid va
 .events li:last-child { border-bottom: 1px solid var(--line) }
 .events .yr { font: 500 var(--s-1)/1.4 var(--mono); color: var(--orange); font-variant-numeric: tabular-nums }
 .events .ev { font: 600 var(--s1)/1.25 var(--display) }
+.events .role { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 3px 8px; border: 1px solid var(--emerald); border-radius: 999px; font: 500 .6875rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--emerald) }
+.events .sub { display: block; margin-top: 4px; font: 400 var(--s-1)/1.4 var(--body); color: var(--muted) }
 .events .pl { color: var(--muted); font-size: var(--s-1); text-align: right }
 @media (max-width: 640px) { .events li { grid-template-columns: 1fr } .events .pl { text-align: left } }
 
@@ -393,8 +395,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
       <span class="play" aria-hidden="true"></span>
       <span class="talk-text"><span class="t">Watch the keynote ↗</span><span class="u">Video on X · @irishnftgal</span></span>
     </a>
-    <h3 class="events-h">Speaker at</h3>
+    <h3 class="events-h">Speaker &amp; judge at</h3>
     <ul class="events">
+      <li><span class="yr">2026</span><span class="ev">Bridge Demo Day · dev3pack <span class="role">Judge</span><span class="sub">Solana pitching competition</span></span><span class="pl">Remote</span></li>
       <li><span class="yr">2026 · 2025 · 2024</span><span class="ev">NFC Lisbon</span><span class="pl">Lisbon, Portugal</span></li>
       <li><span class="yr">2026</span><span class="ev">Dappcon</span><span class="pl">Berlin, Germany</span></li>
       <li><span class="yr">2025</span><span class="ev">ETH Dublin</span><span class="pl">Dublin, Ireland</span></li>
