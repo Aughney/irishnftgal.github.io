@@ -158,6 +158,10 @@ section.block { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid va
 .talk .t { font: 600 var(--s1)/1.2 var(--display) }
 .talk .u { font: 400 var(--s-1)/1.3 var(--mono); color: var(--muted) }
 
+.quote { margin: 0 0 clamp(24px, 4vw, 36px); padding-left: clamp(16px, 3vw, 28px); border-left: 3px solid var(--magenta); display: grid; gap: 10px }
+.quote p { font: 600 clamp(1.4rem, 3.4vw, 2.25rem)/1.2 var(--display); max-width: 30ch; text-wrap: balance }
+.quote cite { font: 500 var(--s-1)/1 var(--mono); font-style: normal; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) }
+
 /* followers */
 .names { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px }
 .names li { font: 600 clamp(1.25rem, 3vw, 2rem)/1 var(--display); padding: 18px 26px; border: 1px solid var(--line); border-radius: 999px; background: var(--ink-2) }
@@ -346,6 +350,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
       <h2>Keynote speaking</h2>
       <p>Niamh gives keynote talks at Web3 and art events. Watch one of her keynotes below.</p>
     </div>
+    <blockquote class="quote"><p>“We should not fear AI, we should fear Quantum Computing.”</p><cite>Niamh Aughney</cite></blockquote>
     <a class="talk" href="https://x.com/irishnftgal/status/2057077303960592696" target="_blank" rel="noopener">
       <span class="play" aria-hidden="true"></span>
       <span class="talk-text"><span class="t">Watch the keynote ↗</span><span class="u">Video on X · @irishnftgal</span></span>
