@@ -178,6 +178,15 @@ section.block { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid va
 .quote p { font: 600 clamp(1.4rem, 3.4vw, 2.25rem)/1.2 var(--display); max-width: 30ch; text-wrap: balance }
 .quote cite { font: 500 var(--s-1)/1 var(--mono); font-style: normal; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) }
 
+.events-h { margin: clamp(36px, 5vw, 56px) 0 8px; font: 500 var(--s-1)/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted) }
+.events { list-style: none; margin: 0; padding: 0 }
+.events li { display: grid; grid-template-columns: 170px minmax(0, 1fr) minmax(0, 220px); gap: 4px 24px; align-items: baseline; padding-block: 14px; border-top: 1px solid var(--line) }
+.events li:last-child { border-bottom: 1px solid var(--line) }
+.events .yr { font: 500 var(--s-1)/1.4 var(--mono); color: var(--orange); font-variant-numeric: tabular-nums }
+.events .ev { font: 600 var(--s1)/1.25 var(--display) }
+.events .pl { color: var(--muted); font-size: var(--s-1); text-align: right }
+@media (max-width: 640px) { .events li { grid-template-columns: 1fr } .events .pl { text-align: left } }
+
 /* followers */
 .count { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; text-decoration: none; margin-bottom: 28px }
 .count strong { font: 800 clamp(3.5rem, 10vw, 6rem)/.9 var(--display); letter-spacing: -.04em; background: linear-gradient(100deg, var(--magenta), var(--orange) 50%, var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; font-variant-numeric: tabular-nums }
@@ -377,13 +386,29 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space
     <div class="head">
       <span class="eyebrow">On stage</span>
       <h2>Keynote speaking</h2>
-      <p>Niamh gives keynote talks at Web3 and art events. Watch one of her keynotes below.</p>
+      <p>Niamh has spoken at blockchain, NFT and Web3 events across Europe and the US since 2021. Watch one of her keynotes below.</p>
     </div>
     <blockquote class="quote"><p>“We should not fear AI, we should fear Quantum Computing.”</p><cite>Niamh Aughney</cite></blockquote>
     <a class="talk" href="https://x.com/irishnftgal/status/2057077303960592696" target="_blank" rel="noopener">
       <span class="play" aria-hidden="true"></span>
       <span class="talk-text"><span class="t">Watch the keynote ↗</span><span class="u">Video on X · @irishnftgal</span></span>
     </a>
+    <h3 class="events-h">Speaker at</h3>
+    <ul class="events">
+      <li><span class="yr">2026 · 2025 · 2024</span><span class="ev">NFC Lisbon</span><span class="pl">Lisbon, Portugal</span></li>
+      <li><span class="yr">2026</span><span class="ev">Dappcon</span><span class="pl">Berlin, Germany</span></li>
+      <li><span class="yr">2025</span><span class="ev">ETH Dublin</span><span class="pl">Dublin, Ireland</span></li>
+      <li><span class="yr">2024</span><span class="ev">NFT NYC</span><span class="pl">New York, USA</span></li>
+      <li><span class="yr">2024</span><span class="ev">NFT Tallinn</span><span class="pl">Tallinn, Estonia</span></li>
+      <li><span class="yr">2024</span><span class="ev">Zebu Live</span><span class="pl">London, UK</span></li>
+      <li><span class="yr">2023</span><span class="ev">NFT Lugano</span><span class="pl">Lugano, Switzerland</span></li>
+      <li><span class="yr">2023</span><span class="ev">NFT London</span><span class="pl">London, UK</span></li>
+      <li><span class="yr">2022</span><span class="ev">Ireland Music Week</span><span class="pl">Ireland</span></li>
+      <li><span class="yr">2022</span><span class="ev">NFT London Music Network</span><span class="pl">London, UK</span></li>
+      <li><span class="yr">2022</span><span class="ev">Web3 Creator Summit · Wishu</span><span class="pl"></span></li>
+      <li><span class="yr">2021</span><span class="ev">WebThreeIRL</span><span class="pl">Galway, Ireland</span></li>
+      <li><span class="yr">2021</span><span class="ev">Defi Conf</span><span class="pl">Belfast, UK</span></li>
+    </ul>
   </div>
 </section>
 
